@@ -1,63 +1,46 @@
-import java.text.DecimalFormat;
-import java.util.Scanner;
-
 public class principal {
     public static void main(String[] args) {
-        //Desenvolver um programa que utiliza classe lendo dados de clientes,
-        // de 2 produtos e do vendedor. Fazer o calculo de valor a pagar e de
-        // comissão e mostrar os dados do cliente, dos produtos, do valor a pagar
-        // do vendedor e da comissão a receber
-        classes classes = new classes();
-        Scanner sc = new Scanner(System.in);
-        DecimalFormat df = new DecimalFormat("#,###,##0.00");
 
-        //CLIENT
-        //String client_informations = clientName + " | " + telephone_client + " | " +adress_client ;
-        System.out.println("-----------------------------------------------------------");
-        System.out.println("client name: ");
-        classes.clientName = sc.next();
-        System.out.println("-----------------------------------------------------------");
+        classes venda = new classes();
+        //vendedor (ler)
+        venda.cliente = "Luiza";
 
-        System.out.println("client telephone: ");
-        classes.telephone_client = sc.next();
-        System.out.println("-----------------------------------------------------------");
+        // venda 1
+        venda.marcaCar1 = "Ferrari";
+        venda.anoCar1 = "2291";
+        venda.nomeCar1 = "New Era";
+        venda.corCar1 = "Rosa";
 
-        System.out.println("client adress: ");
-        classes.adress_client = sc.next();
-        System.out.println("-----------------------------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------------------------------------");
+        System.out.println("VENDA 1");
+        System.out.println("Comprado por: " + venda.getCliente());
+        System.out.println("-----------------------------------------------------------------------------------------------------------------");
+        System.out.println("Vendido por: " + venda.getVendedor());
+        System.out.println("-----------------------------------------------------------------------------------------------------------------");
+        System.out.println("O produto é:");
+        System.out.println("Marca: " + venda.marcaCar1 + " | Ano: " + venda.anoCar1 + " | Nome: " + venda.nomeCar1 + " | Cor: " + venda.corCar1);
+        System.out.println("-----------------------------------------------------------------------------------------------------------------");
 
-        System.out.println("CLIENT INFORMATIONS: " + classes.getClientInformations());
-        System.out.println("-----------------------------------------------------------");
+        //venda 2
 
+        venda.marcaCar2 = "Ford";
+        venda.anoCar2 = "1990";
+        venda.nomeCar2 = "Old Era";
+        venda.corCar2 = "Prata";
+        System.out.println("");
+        System.out.println("");
+        System.out.println("VENDA 2");
+        System.out.println("Comprado por: " + venda.getCliente());
+        System.out.println("-----------------------------------------------------------------------------------------------------------------");
+        System.out.println("Vendido por: " + venda.getVendedor());
+        System.out.println("-----------------------------------------------------------------------------------------------------------------");
+        System.out.println("O produto é:");
+        System.out.println("Marca: " + venda.marcaCar2 + " | Ano: " + venda.anoCar2 + " | Nome: " + venda.nomeCar2 + " | Cor: " + venda.corCar2);
+        System.out.println("-----------------------------------------------------------------------------------------------------------------");
 
-        //PRODUCT1
-        //  String product1_informations = product1_name1 +" | "+ product1_color + " | " + product1_type + "| " + precoProduct1;
-
-        System.out.println("product name: ");
-        classes.product1_name1 = sc.next();
-        System.out.println("-----------------------------------------------------------");
-
-        System.out.println("product color: ");
-        classes.product1_color = sc.next();
-        System.out.println("-----------------------------------------------------------");
-
-        System.out.println("product type: ");
-        classes.product1_type = sc.next();
-        System.out.println("-----------------------------------------------------------");
-
-        System.out.println("product price: ");
-        classes.priceProduct1 = sc.nextDouble();
-        System.out.println("-----------------------------------------------------------");
-
-        System.out.println("PRODUCT 1 INFORMATIONS: " + classes.getProduct1_informations());
-
-        //VENDOR
-        System.out.println("vendor name: ");
-        classes.vendorName = sc.next();
-
-        System.out.println("VENDOR INFORMATIONS: " + classes.getVendorInformations());
-        System.out.println("comission: " + classes.getComissionVendor());
 
 
     }
 }
+
+
