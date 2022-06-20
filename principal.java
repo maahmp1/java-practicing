@@ -1,46 +1,86 @@
+import java.util.Scanner;
+
 public class principal {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        classes classes = new classes();
+        //cliente
+        //o que comprou
+        // quem comprou
+        //qto pagou
+        // quem vendeu
+        // qual a comissao
 
-        classes venda = new classes();
-        //vendedor (ler)
-        venda.cliente = "Luiza";
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("Informe o *nome* do cliente: ");
+        classes.cliente = sc.next();
+        System.out.println("Informe o *telefone* do cliente: ");
+        classes.telefone = sc.next();
+        System.out.println("Informe o *endereço* do cliente: ");
 
-        // venda 1
-        venda.marcaCar1 = "Ferrari";
-        venda.anoCar1 = "2291";
-        venda.nomeCar1 = "New Era";
-        venda.corCar1 = "Rosa";
+        classes.endereco = sc.next();
+        System.out.println("-----------------------------------------------------------");
 
-        System.out.println("-----------------------------------------------------------------------------------------------------------------");
-        System.out.println("VENDA 1");
-        System.out.println("Comprado por: " + venda.getCliente());
-        System.out.println("-----------------------------------------------------------------------------------------------------------------");
-        System.out.println("Vendido por: " + venda.getVendedor());
-        System.out.println("-----------------------------------------------------------------------------------------------------------------");
-        System.out.println("O produto é:");
-        System.out.println("Marca: " + venda.marcaCar1 + " | Ano: " + venda.anoCar1 + " | Nome: " + venda.nomeCar1 + " | Cor: " + venda.corCar1);
-        System.out.println("-----------------------------------------------------------------------------------------------------------------");
+        //produto 1
+        String prod1;
+        double preco_prod1;
+        int qt_prod1;
 
-        //venda 2
+        System.out.println("Informe o *nome* do 1º produto: ");
+        classes.nome_prod1 = sc.next();
+        System.out.println("Informe o *preço* do 1º produto: ");
+        classes.preco_prod1 = sc.nextDouble();
+        System.out.println("Informe a *quantidade* do 1º produto: ");
+        classes.quant_prod1 = sc.nextInt();
 
-        venda.marcaCar2 = "Ford";
-        venda.anoCar2 = "1990";
-        venda.nomeCar2 = "Old Era";
-        venda.corCar2 = "Prata";
+
+        //
+        //prod2
+        String prod2;
+        double preco_prod2;
+        int qt_prod2;
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("Informe o *nome* do 2º produto: ");
+        classes.nome_prod2 = sc.next();
+        System.out.println("Informe o *preço* do 2º produto: ");
+        classes.preco_prod2 = sc.nextDouble();
+
+        System.out.println("Informe a *quantidade* do 2º produto: ");
+        classes.quant_prod2 = sc.nextInt();
+        System.out.println("-----------------------------------------------------------");
+
         System.out.println("");
-        System.out.println("");
-        System.out.println("VENDA 2");
-        System.out.println("Comprado por: " + venda.getCliente());
-        System.out.println("-----------------------------------------------------------------------------------------------------------------");
-        System.out.println("Vendido por: " + venda.getVendedor());
-        System.out.println("-----------------------------------------------------------------------------------------------------------------");
-        System.out.println("O produto é:");
-        System.out.println("Marca: " + venda.marcaCar2 + " | Ano: " + venda.anoCar2 + " | Nome: " + venda.nomeCar2 + " | Cor: " + venda.corCar2);
-        System.out.println("-----------------------------------------------------------------------------------------------------------------");
+
+        //
+
+        //vendedor
+        String vendedor;
+        System.out.println("Informe o *nome* do vendedor: ");
+        classes.vendedor = sc.next();
+
+        //cliente
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("CLIENTE");
+        System.out.println("Nome: " + classes.cliente);
+        System.out.println("Endereço: " + classes.endereco);
+        System.out.println("Telefone: " + classes.telefone);
+        //vendedor
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("VENDEDOR");
+        System.out.println("Nome: " + classes.getVendedor());
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("PRODUTO 1");
+        System.out.println("Nome: " +classes.nome_prod1);
+        System.out.println("Preço: " + classes.preco_prod1);
+        System.out.println("Quantidade: " + classes.quant_prod1);
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("PRODUTO 2");
+        System.out.println("Nome: " +classes.nome_prod2);
+        System.out.println("Preço: " + classes.preco_prod2);
+        System.out.println("Quantidade: " + classes.quant_prod2);
+        System.out.println("-----------------------------------------------------------");
 
 
 
     }
 }
-
-
